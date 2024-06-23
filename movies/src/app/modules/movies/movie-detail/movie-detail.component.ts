@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { environment } from 'src/environments/environment';
 import { MovieDetail } from '../models/movie-detail.model';
+import { ApiNameSpace } from 'src/app/utils/api.model';
 
 @Component({
   selector: 'app-movie-detail',
@@ -26,7 +27,7 @@ export class MovieDetailComponent implements OnInit {
   }
 
   private getMovies(movieId: string) {
-    const config = { url: `${environment.baseUrl}/movie/${movieId}`, params: { api_key: environment.apiKey } };
+    const config: ApiNameSpace.Params = { url: `${environment.baseUrl}/movie/${movieId}`, params: { api_key: environment.apiKey } };
     this._apiService.getService(config).subscribe((response: MovieDetail) => {
       // console.log(`Response => ${response}`);
       this.movie = response;

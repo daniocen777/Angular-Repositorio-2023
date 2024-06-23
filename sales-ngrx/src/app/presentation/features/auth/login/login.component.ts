@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
   }
 
   private _initForm(): FormGroup {
-    // segun strapi
     return this.loginForm = this._fb.group({
       identifier: ['', Validators.compose([Validators.required, Validators.email])],
       password: ['', Validators.required]

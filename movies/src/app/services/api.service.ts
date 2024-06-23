@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable, map, catchError, throwError } from 'rxjs';
 import { ApiNameSpace } from '../utils/api.model';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,8 +14,7 @@ export class ApiService<T> {
   postService(request: ApiNameSpace.Params): Observable<T> {
     const headers = new HttpHeaders({
       accept: 'application/json'
-    }
-    );
+    });
 
     const { url, params, body } = request;
     const options = {

@@ -1,0 +1,8 @@
+<app-header
+  (collapsed)="printShow($event)"
+  (sidenavWith)="sidenavWith($event)"
+></app-header>
+
+<app-dashboard [sidenavWith]="sidenavValue"></app-dashboard>
+
+<app-footer></app-footer>

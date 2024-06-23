@@ -24,7 +24,6 @@ export class BaseComponent<T extends any> implements OnInit {
     this.apiService.getService(this.paramsConfig).subscribe({
       next: response => {
         console.log(response);
-
       },
       error: () => { },
       complete: () => { }
