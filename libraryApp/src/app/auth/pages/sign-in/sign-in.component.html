@@ -1,1 +1,24 @@
-<p>sign-in works! <mat-icon matSuffix svgIcon="world"></mat-icon></p>
+<div class="container-form-login">
+  <form class="log-in-form" autocomplete="off">
+    <h3>Iniciar Sesión</h3>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Usuario</mat-label>
+      <input
+        matInput
+        formControlName="username"
+        placeholder="Usuario"
+        type="text"
+      />
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        placeholder="Contraseña"
+        type="text"
+      />
+    </mat-form-field>
+    <button mat-raised-button color="primary">Ingresar</button>
+  </form>
+</div>

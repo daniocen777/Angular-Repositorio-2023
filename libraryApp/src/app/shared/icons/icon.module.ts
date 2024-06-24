@@ -12,5 +12,17 @@ export class IconModule {
         this._matIconRegistry.addSvgIcon(
             'world',
             this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/world.svg'));
+
+        this._matIconRegistry.addSvgIcon(
+            'menu',
+            this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/menu.svg'));
+
+        this._matIconRegistry.addSvgIcon(
+            'sign-out',
+            this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/sign-out.svg'));
+
+        this._matIconRegistry.addSvgIcon(
+            'signout',
+            this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/signout.svg'));
     }
 }
