@@ -24,5 +24,17 @@ export class IconModule {
         this._matIconRegistry.addSvgIcon(
             'signout',
             this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/signout.svg'));
+
+        this._matIconRegistry.addSvgIcon(
+            'add',
+            this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/add.svg'));
+
+        this._matIconRegistry.addSvgIcon(
+            'update',
+            this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/update.svg'));
+
+        this._matIconRegistry.addSvgIcon(
+            'delete',
+            this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/delete.svg'));
     }
 }

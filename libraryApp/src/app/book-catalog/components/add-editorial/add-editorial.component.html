@@ -1,1 +1,8 @@
-<p>add-editorial works!</p>
+<button mat-button (click)="onClose()">Cerrar</button>
+
+<ng-container *ngIf="data">
+  <p>{{ data.id }}</p>
+  <p>{{ data.description }}</p>
+</ng-container>
+
+<button mat-button color="primary" (click)="onSend()">Enviar</button>
