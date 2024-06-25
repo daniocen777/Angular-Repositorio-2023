@@ -29,6 +29,7 @@ const ELEMENT_DATA: Editorial[] = [
   styleUrls: ['./list-editorial.component.scss']
 })
 export class ListEditorialComponent implements OnInit, AfterViewInit {
+  title!: String;
 
   dataSource!: MatTableDataSource<Editorial>;
   columns: string[] = ['id', 'description', 'select'];
@@ -42,6 +43,7 @@ export class ListEditorialComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.title = 'Catálogo De Libros';
     this.totalElements = ELEMENT_DATA.length;
   }
 
@@ -64,7 +66,6 @@ export class ListEditorialComponent implements OnInit, AfterViewInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.width = "40%";
-    dialogConfig.height = "60%";
     dialogConfig.data = editorial;
 
     const dialogRef = this._dialog.open(AddEditorialComponent, dialogConfig);

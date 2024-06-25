@@ -1,8 +1,42 @@
-<button mat-button (click)="onClose()">Cerrar</button>
-
-<ng-container *ngIf="data">
-  <p>{{ data.id }}</p>
-  <p>{{ data.description }}</p>
-</ng-container>
-
-<button mat-button color="primary" (click)="onSend()">Enviar</button>
+<h2 mat-dialog-title>
+  {{
+    formEditorial.controls["id"].value
+      ? "Editar Editorial"
+      : "Registrar Editorial"
+  }}
+</h2>
+<mat-divider></mat-divider>
+<mat-dialog-content class="mat-typography">
+  <div class="container" [formGroup]="formEditorial">
+    <div class="row">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="Identificador" formControlName="id" />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <input
+          matInput
+          placeholder="Descripción de editorial"
+          formControlName="description"
+        />
+        <mat-error>Por favor, ingrese una descripción</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-divider></mat-divider>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button
+    mat-raised-button
+    type="submit"
+    color="primary"
+    [disabled]="onDisabled()"
+    (click)="onSubmit()"
+  >
+    Enviar
+  </button>
+</mat-dialog-actions>

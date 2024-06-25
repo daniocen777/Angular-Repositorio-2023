@@ -36,5 +36,9 @@ export class IconModule {
         this._matIconRegistry.addSvgIcon(
             'delete',
             this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/delete.svg'));
+
+        this._matIconRegistry.addSvgIcon(
+            'search',
+            this._domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/search.svg'));
     }
 }

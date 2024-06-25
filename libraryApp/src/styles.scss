@@ -17,13 +17,17 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.full-width,
+table {
+    width: 100%;
+}
+
 
 /* Definición del contenedor de Bootstrap */
 .container {
     width: 95%;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    margin-top: 2.4rem;
 }
 
 /* Definición del contenedor de ancho completo de Bootstrap */
@@ -201,9 +205,8 @@ h6 {
 
 .text-sub-title {
     font-size: 3.5rem;
-    color: #ff9800;
-    font-weight: 800;
-    font-family: "Signika";
+    color: #673ab7;
+    font-weight: bold;
 }
 
 /**
