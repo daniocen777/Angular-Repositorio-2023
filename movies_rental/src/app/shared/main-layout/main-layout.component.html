@@ -1,0 +1,56 @@
+<mat-toolbar color="primary">
+  <button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+    mat-icon-button
+    aria-label="Menu icon"
+  >
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+  </button>
+  <span>Movies Rental</span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav="matSidenav"
+    class="mat-elevation-z8"
+    mode="side"
+    opened
+  >
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://c4.wallpaperflare.com/wallpaper/2/65/70/jill-valentine-resident-evil-3-remake-resident-evil-biohazard-hd-wallpaper-thumb.jpg"
+      alt="avatar"
+    />
+    <h4 class="name">Jill Valentine</h4>
+    <p class="designation">S.T.A.R.S</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+      <span>Lista</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+      <span>Crear</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+      <span>Películas</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+      <span>Salir</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
