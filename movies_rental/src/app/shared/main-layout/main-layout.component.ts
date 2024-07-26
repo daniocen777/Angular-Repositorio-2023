@@ -1,5 +1,5 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, Input } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
@@ -8,6 +8,7 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./main-layout.component.scss']
 })
 export class MainLayoutComponent implements OnInit, AfterViewInit {
+  @Input() title: string = 'Movies Rental';
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
   constructor(private _observer: BreakpointObserver, private _changeDetector: ChangeDetectorRef) { }

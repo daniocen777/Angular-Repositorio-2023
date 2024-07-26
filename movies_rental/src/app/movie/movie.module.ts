@@ -1,25 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CustomerRoutingModule } from './customer-routing.module';
-import { CreateComponent } from './pages/create/create.component';
+import { MovieRoutingModule } from './movie-routing.module';
 import { MainComponent } from './pages/main/main.component';
 import { ListComponent } from './pages/list/list.component';
+import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module';
-import { SharedModule } from "../shared/shared.module";
 
 
 @NgModule({
   declarations: [
-    CreateComponent,
     MainComponent,
     ListComponent
   ],
   imports: [
     CommonModule,
-    CustomerRoutingModule,
+    MovieRoutingModule,
     MaterialModule,
     SharedModule
-]
+  ]
 })
-export class CustomerModule { }
+export class MovieModule { }

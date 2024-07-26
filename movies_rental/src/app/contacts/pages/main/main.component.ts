@@ -6,11 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  title!: string;
 
-  constructor() {
-    this.title = 'Customers';
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

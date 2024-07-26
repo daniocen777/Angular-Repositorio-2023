@@ -1,0 +1,21 @@
+@import '/src/themes/theme.scss';
+
+.google-card-container {
+    padding: 13px 11px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: $thin-border;
+    border-radius: $border-radius5;
+    font-weight: bold;
+    color: $secondary-text-color;
+
+    img {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
