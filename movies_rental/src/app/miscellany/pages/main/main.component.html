@@ -1,0 +1,12 @@
+<app-main-layout [title]="title">
+  <div sidenav>
+    <mat-selection-list #shoes [multiple]="false">
+      <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+        <a mat-list-item> {{ shoe }} </a>
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+  <div body>
+    <router-outlet></router-outlet>
+  </div>
+</app-main-layout>

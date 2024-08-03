@@ -18,7 +18,11 @@ const routes: Routes = [
     path: 'contacts',
     loadChildren: () => import('./contacts/contacts.module').then((m) => m.ContactsModule),
   },
-  { path: '**', redirectTo: 'customers' },
+  {
+    path: 'miscellany',
+    loadChildren: () => import('./miscellany/miscellany.module').then((m) => m.MiscellanyModule),
+  },
+  { path: '**', redirectTo: 'miscellany' },
 ];
 
 @NgModule({
