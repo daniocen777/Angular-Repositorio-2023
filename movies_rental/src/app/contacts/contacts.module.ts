@@ -7,6 +7,7 @@ import { ListComponent } from './pages/list/list.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MaterialModule } from '../material/material.module';
+import { DetailsComponent } from './pages/details/details.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MaterialModule } from '../material/material.module';
     MainComponent,
     ListComponent,
     ToolbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    DetailsComponent
   ],
   imports: [
     CommonModule,

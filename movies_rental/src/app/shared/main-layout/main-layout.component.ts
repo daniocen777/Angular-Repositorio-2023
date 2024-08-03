@@ -2,6 +2,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, Input } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 
+const SMALL_WIDTH_BREAKPOINT = 720;
+
 @Component({
   selector: 'app-main-layout',
   templateUrl: './main-layout.component.html',
@@ -17,16 +19,17 @@ export class MainLayoutComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this._observer.observe(['(max-width: 800px)']).subscribe((res: any) => {
-      // console.log(res);
-      if (res.matches) {
-        this.sidenav.mode = 'over';
-        this.sidenav.close();
-      } else {
-        this.sidenav.mode = 'side';
-        this.sidenav.open();
-      }
-    });
+    this._observer.observe([`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`])
+      .subscribe((res: any) => {
+        // console.log(res);
+        if (res.matches) {
+          this.sidenav.mode = 'over';
+          this.sidenav.close();
+        } else {
+          this.sidenav.mode = 'side';
+          this.sidenav.open();
+        }
+      });
     // Cuando detecte el cambio
     this._changeDetector.detectChanges();
   }

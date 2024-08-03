@@ -1,8 +1,7 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Country } from '../../models/country';
 import { CountryService } from '../../services/country.service';
-import { CountryObject } from '../../models/countryObject';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 
@@ -44,6 +43,6 @@ export class SidenavComponent implements OnInit {
     console.log("PAISES", this.countries);
   } */
 
-    
+
 
 }

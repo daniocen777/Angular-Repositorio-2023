@@ -8,7 +8,8 @@
     <mat-toolbar color="primary">Contacts</mat-toolbar>
     <mat-list role="list">
       <mat-list-item role="listitem" *ngFor="let item of countries">
-          {{ item.name }}
+        <img matListAvatar [src]="item.flag?.small" alt="Country flag" />
+        <a matLine [routerLink]="['/contacts/details', item.name]"> {{ item.name }} </a>
       </mat-list-item>
     </mat-list>
   </mat-sidenav>

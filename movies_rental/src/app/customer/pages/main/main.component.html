@@ -1,3 +1,19 @@
 <app-main-layout [title]="title">
-  <router-outlet></router-outlet>
+  <div sidenav>
+    <button mat-button class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+      <span>Lista</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+      <span>Crear</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+      <span>Películas</span>
+    </button>
+  </div>
+  <div body>
+    <router-outlet></router-outlet>
+  </div>
 </app-main-layout>

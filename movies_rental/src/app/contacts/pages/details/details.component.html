@@ -1,0 +1,57 @@
+<div *ngIf="!country">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="country">
+  <mat-card>
+    <mat-card-header>
+      <img
+        mat-card-avatar
+        [src]="country.flag?.small"
+        class="header-image"
+        alt="Country flag"
+      />
+      <mat-card-title> {{ country.name }} </mat-card-title>
+      <mat-card-subtitle> {{ country.official_name }} </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title> General Data </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            Region: <span> {{ country.region }} </span>
+          </p>
+          <p>
+            Sub Region: <span> {{ country.subregion }} </span>
+          </p>
+          <p>
+            Population: <span> {{ country.population | number }} </span>
+          </p>
+          <p>Translations:</p>
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile colspan="1" [style.background]="'lightblue'">
+              <mat-list role="list">
+                <mat-list-item
+                  *ngFor="let item of translations"
+                  role="listitem"
+                >
+                  {{ item }}
+                </mat-list-item>
+              </mat-list>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1" [style.background]="'lightgreen'">
+              <mat-list role="list">
+                <mat-list-item> {{ country.translations?.fra }} </mat-list-item>
+                <mat-list-item> {{ country.translations?.ita }} </mat-list-item>
+                <mat-list-item> {{ country.translations?.spa }} </mat-list-item>
+                <mat-list-item> {{ country.translations?.deu }} </mat-list-item>
+              </mat-list>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+  </mat-card>
+</div>
