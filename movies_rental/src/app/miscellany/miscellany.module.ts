@@ -6,7 +6,8 @@ import { DependentSelectorsComponent } from './pages/dependent-selectors/depende
 import { MainComponent } from './pages/main/main.component';
 import { MaterialModule } from '../material/material.module';
 import { SharedModule } from '../shared/shared.module';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     MiscellanyRoutingModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class MiscellanyModule { }

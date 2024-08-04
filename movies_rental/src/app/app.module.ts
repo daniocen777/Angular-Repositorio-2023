@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+// Agregar la api para el ejemmplo
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { DbData } from 'src/assets/db.data';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     NgbModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+
+    HttpClientInMemoryWebApiModule.forRoot(DbData)
   ],
   providers: [],
   bootstrap: [AppComponent]
