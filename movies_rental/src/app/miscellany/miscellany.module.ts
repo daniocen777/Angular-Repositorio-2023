@@ -8,11 +8,13 @@ import { MaterialModule } from '../material/material.module';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RxjsRickmortyComponent } from './pages/rxjs-rickmorty/rxjs-rickmorty.component';
 
 @NgModule({
   declarations: [
     DependentSelectorsComponent,
-    MainComponent
+    MainComponent,
+    RxjsRickmortyComponent
   ],
   imports: [
     CommonModule,
