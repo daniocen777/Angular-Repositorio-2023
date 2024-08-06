@@ -9,12 +9,14 @@ import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RxjsRickmortyComponent } from './pages/rxjs-rickmorty/rxjs-rickmorty.component';
+import { RxjsMapOperatorComponent } from './pages/rxjs-map-operator/rxjs-map-operator.component';
 
 @NgModule({
   declarations: [
     DependentSelectorsComponent,
     MainComponent,
-    RxjsRickmortyComponent
+    RxjsRickmortyComponent,
+    RxjsMapOperatorComponent
   ],
   imports: [
     CommonModule,

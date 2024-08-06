@@ -1,0 +1,65 @@
+<!-- <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <th scope="col" class="px-6 py-3">NAME</th>
+        <th scope="col" class="px-6 py-3">EMAIL</th>
+        <th scope="col" class="px-6 py-3">COUNTRY</th>
+        <th scope="col" class="px-6 py-3">POSTCODE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+        *ngFor="let user of users"
+      >
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          {{ user.name }}
+        </th>
+        <td class="px-6 py-4">
+          {{ user.email }}
+        </td>
+        <td class="px-6 py-4">
+          {{ user.location.country }}
+        </td>
+        <td class="px-6 py-4">
+          {{ user.location.postcode }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<table mat-table [dataSource]="users" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef>Country</th>
+    <td mat-cell *matCellDef="let element">{{ element.countryName }}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="postcode">
+    <th mat-header-cell *matHeaderCellDef>POSTCODE</th>
+    <td mat-cell *matCellDef="let element">{{ element.location.postcode }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
