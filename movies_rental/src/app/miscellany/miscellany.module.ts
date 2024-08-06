@@ -10,13 +10,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RxjsRickmortyComponent } from './pages/rxjs-rickmorty/rxjs-rickmorty.component';
 import { RxjsMapOperatorComponent } from './pages/rxjs-map-operator/rxjs-map-operator.component';
+import { RxjsSwitchmapOperatorComponent } from './pages/rxjs-switchmap-operator/rxjs-switchmap-operator.component';
 
 @NgModule({
   declarations: [
     DependentSelectorsComponent,
     MainComponent,
     RxjsRickmortyComponent,
-    RxjsMapOperatorComponent
+    RxjsMapOperatorComponent,
+    RxjsSwitchmapOperatorComponent
   ],
   imports: [
     CommonModule,

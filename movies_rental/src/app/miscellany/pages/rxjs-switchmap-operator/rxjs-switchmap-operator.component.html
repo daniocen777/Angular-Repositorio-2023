@@ -1,0 +1,17 @@
+<div>
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Search</mat-label>
+    <input
+      matInput
+      type="search"
+      (input)="search($event)"
+      placeholder="Search user"
+    />
+  </mat-form-field>
+  <button mat-raised-button color="primary">Primary</button>
+</div>
+<ng-container *ngIf="result$ | async as result">
+  <div>
+    {{ result | json }}
+  </div>
+</ng-container>
