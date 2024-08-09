@@ -22,7 +22,7 @@ const routes: Routes = [
     path: 'miscellany',
     loadChildren: () => import('./miscellany/miscellany.module').then((m) => m.MiscellanyModule),
   },
-  { path: '**', redirectTo: 'miscellany' },
+  { path: '**', redirectTo: 'movies' },
 ];
 
 @NgModule({

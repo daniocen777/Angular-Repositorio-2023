@@ -1,0 +1,28 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav
+    #sidenav
+    class="app-sidenav mat-elevation-z10"
+    [opened]="!isScreenSmall"
+    [mode]="isScreenSmall ? 'over' : 'side'"
+  >
+    <ng-content select="[sidenav]"></ng-content>
+    <!-- <mat-toolbar color="primary">Contacts</mat-toolbar>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of countries">
+        <img matListAvatar [src]="item.flag?.small" alt="Country flag" />
+        <a matLine [routerLink]="['/contacts/details', item.name]">
+          {{ item.name }}
+        </a>
+      </mat-list-item>
+    </mat-list> -->
+  </mat-sidenav>
+  <mat-sidenav-content class="app-sidenav-content">
+    <app-toolbar
+      (toggleSidenav)="sidenav.toggle()"
+      [title]="title"
+    ></app-toolbar>
+    <div class="wrapper">
+      <ng-content select="[body]"></ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
